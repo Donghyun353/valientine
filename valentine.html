@@ -121,7 +121,11 @@
     }
 
     noBtn.addEventListener("mouseenter", moveNoButton);
-    noBtn.addEventListener("touchstart", (e)=>{ e.preventDefault(); moveNoButton(); }, {passive:false});
+    noBtn.addEventListener("touchstart", (e)=>{
+      e.preventDefault();
+      moveNoButton();
+    }, { passive:false });
+
     noBtn.addEventListener("click", () => {
       msg.textContent = "Nice try 😘 (No is not available)";
       moveNoButton();
