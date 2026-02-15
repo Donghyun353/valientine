@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Valentine</title>
+  <title>Valentine - FINAL TEST</title>
   <style>
     body{
       font-family: Arial, sans-serif;
@@ -14,6 +14,8 @@
       min-height:100vh;
       margin:0;
       overflow:hidden;
+      padding:16px;
+      box-sizing:border-box;
     }
     .card{
       background:#fff;
@@ -25,8 +27,18 @@
       position:relative;
       z-index:2;
     }
-    h1{ margin:0 0 10px; font-size:26px; line-height:1.25; }
-    p{ margin:0 0 18px; color:#444; }
+    .banner{
+      font-size:18px;
+      font-weight:800;
+      padding:10px 12px;
+      border-radius:12px;
+      margin:0 0 14px;
+      background:#ff3b30;
+      color:#fff;
+      letter-spacing:.5px;
+    }
+    h1{ margin:0 0 8px; font-size:26px; line-height:1.3; }
+    p{ margin:10px 0 18px; color:#444; }
     .btns{
       display:flex;
       gap:12px;
@@ -71,8 +83,11 @@
 </head>
 <body>
   <div class="card">
-    <h1>Will you be my Valentine,</h1>
+    <div class="banner">
+
+    <h1> Will you be my Valentine, </h1>
     <h1>Hwiyoon my lovely baby princess? 💘</h1>
+
     <p>Choose wisely 😄</p>
 
     <div class="btns">
@@ -121,15 +136,12 @@
     }
 
     noBtn.addEventListener("mouseenter", moveNoButton);
-    noBtn.addEventListener("touchstart", (e)=>{ 
-      e.preventDefault(); 
-      moveNoButton(); 
-    }, {passive:false});
-
+    noBtn.addEventListener("touchstart", (e)=>{ e.preventDefault(); moveNoButton(); }, {passive:false});
     noBtn.addEventListener("click", () => {
-      msg.textContent = "Nice try 😘 (No is not available)";
+      msg.textContent = "😊 (No는 선택할 수 없어요)";
       moveNoButton();
     });
   </script>
 </body>
 </html>
+
