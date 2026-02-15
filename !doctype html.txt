@@ -14,8 +14,6 @@
       min-height:100vh;
       margin:0;
       overflow:hidden;
-      padding:16px;
-      box-sizing:border-box;
     }
     .card{
       background:#fff;
@@ -75,7 +73,6 @@
   <div class="card">
     <h1>Will you be my Valentine,</h1>
     <h1>Hwiyoon my lovely baby princess? 💘</h1>
-
     <p>Choose wisely 😄</p>
 
     <div class="btns">
@@ -124,7 +121,11 @@
     }
 
     noBtn.addEventListener("mouseenter", moveNoButton);
-    noBtn.addEventListener("touchstart", (e)=>{ e.preventDefault(); moveNoButton(); }, {passive:false});
+    noBtn.addEventListener("touchstart", (e)=>{
+      e.preventDefault();
+      moveNoButton();
+    }, { passive:false });
+
     noBtn.addEventListener("click", () => {
       msg.textContent = "Nice try 😘 (No is not available)";
       moveNoButton();
